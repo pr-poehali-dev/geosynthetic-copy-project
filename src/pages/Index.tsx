@@ -194,8 +194,8 @@ const Index = () => {
 
       {/* HERO */}
       <section className="bg-[#1a2332] pt-28 pb-16 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: "url('https://cdn.poehali.dev/projects/9c8bc8d9-8e4f-43d5-9a7c-670342737c1c/bucket/ce46d21d-71ce-410e-87a2-b3e789a23c33.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 opacity-20"
+          style={{ backgroundImage: "url('https://cdn.poehali.dev/projects/9c8bc8d9-8e4f-43d5-9a7c-670342737c1c/bucket/6511d907-60e2-43ab-a30e-e1544ee98a33.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full mb-4 border border-green-500/30">
