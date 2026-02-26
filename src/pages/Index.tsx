@@ -26,73 +26,73 @@ const ADVANTAGES = [
 
 const PRODUCTS = [
   {
-    icon: "Layers",
+    img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80",
     title: "Геотекстиль",
     desc: "Нетканый и тканый геотекстиль для дорожного строительства, дренажа и армирования грунтов",
     tag: "Есть в наличии",
   },
   {
-    icon: "Grid3x3",
+    img: "https://images.unsplash.com/photo-1601513445506-2ab0d4fb4229?w=400&q=80",
     title: "Геомембрана",
     desc: "Полимерные мембраны для гидроизоляции прудов, полигонов, тоннелей и водохранилищ",
     tag: "Есть в наличии",
   },
   {
-    icon: "LayoutGrid",
+    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80",
     title: "Георешётка",
     desc: "Плоская и объёмная георешётка для укрепления откосов, склонов и дорожного основания",
     tag: "Есть в наличии",
   },
   {
-    icon: "Globe",
+    img: "https://images.unsplash.com/photo-1563720223185-11003d516935?w=400&q=80",
     title: "Геосетка",
     desc: "Стеклянная и полиэфирная геосетка для армирования асфальтобетонных покрытий",
     tag: "Есть в наличии",
   },
   {
-    icon: "Box",
+    img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&q=80",
     title: "Дренажные профили",
     desc: "Профилированные мембраны для устройства дренажных систем фундаментов и кровли",
     tag: "Есть в наличии",
   },
   {
-    icon: "Package",
+    img: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=400&q=80",
     title: "Геокомпозиты",
     desc: "Комплексные геосинтетические материалы, совмещающие функции дренажа и фильтрации",
     tag: "Есть в наличии",
   },
   {
-    icon: "Anchor",
+    img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=80",
     title: "Габионы",
     desc: "Сетчатые конструкции для укрепления берегов, откосов и возведения подпорных стен",
     tag: "Есть в наличии",
   },
   {
-    icon: "Shield",
+    img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&q=80",
     title: "Сварка Нетканых",
     desc: "Услуги по сварке и сшивке геотекстильных материалов на объекте или на складе",
     tag: "Услуга",
   },
   {
-    icon: "Wifi",
+    img: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=400&q=80",
     title: "Сетка против БПЛА",
     desc: "Специализированные защитные сетки для ограждения объектов от БПЛА",
     tag: "Новинка",
   },
   {
-    icon: "Recycle",
+    img: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=400&q=80",
     title: "Геосинтетика секонд",
     desc: "Геосинтетические материалы после использования по сниженным ценам",
     tag: "Эконом",
   },
   {
-    icon: "Scissors",
+    img: "https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?w=400&q=80",
     title: "Резиновая крошка",
     desc: "Резиновая крошка из переработанных шин для спортивных покрытий и дорог",
     tag: "Есть в наличии",
   },
   {
-    icon: "Truck",
+    img: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&q=80",
     title: "Сыпучие строительные материалы",
     desc: "Песок, щебень, грунт с доставкой по Нижнему Новгороду и области",
     tag: "Доставка",
@@ -155,11 +155,9 @@ const Index = () => {
       <header className="fixed top-0 w-full bg-[#1a2332]/95 backdrop-blur-md z-50">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center max-w-6xl">
           <div className="flex items-center gap-2">
-            <div className="w-9 h-9 bg-green-500 rounded-md flex items-center justify-center">
-              <Icon name="Leaf" size={20} className="text-white" />
-            </div>
+            <img src="https://cdn.poehali.dev/projects/9c8bc8d9-8e4f-43d5-9a7c-670342737c1c/bucket/18dd5e30-276a-4a69-af83-5a602f155ad8.jpg" alt="ShellTechGEO" className="w-9 h-9 rounded-md object-cover" />
             <div>
-              <span className="font-bold text-white text-lg leading-none block">ГК Поволжье</span>
+              <span className="font-bold text-white text-lg leading-none block">ShellTechGEO</span>
               <span className="text-green-400 text-xs">Геосинтетика</span>
             </div>
           </div>
@@ -282,24 +280,27 @@ const Index = () => {
           <h2 className="text-center text-2xl md:text-3xl font-bold text-[#1a2332] mb-10">Наша продукция</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {PRODUCTS.map((p, i) => (
-              <div key={i} className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md hover:border-green-200 transition-all group">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-green-100 transition-colors">
-                    <Icon name={p.icon} size={20} className="text-green-500" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h3 className="font-semibold text-[#1a2332] text-sm">{p.title}</h3>
-                    </div>
-                    <p className="text-gray-500 text-xs leading-relaxed mb-3">{p.desc}</p>
-                    <span className="inline-block text-xs bg-green-50 text-green-600 px-2 py-0.5 rounded-full border border-green-100">
+              <div key={i} className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md hover:border-green-200 transition-all group">
+                <div className="h-40 overflow-hidden">
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80"; }}
+                  />
+                </div>
+                <div className="p-5">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-semibold text-[#1a2332] text-sm">{p.title}</h3>
+                    <span className="text-xs bg-green-50 text-green-600 px-2 py-0.5 rounded-full border border-green-100 whitespace-nowrap ml-2">
                       {p.tag}
                     </span>
                   </div>
+                  <p className="text-gray-500 text-xs leading-relaxed mb-4">{p.desc}</p>
+                  <a href="#contacts" className="block text-center border border-green-200 text-green-600 hover:bg-green-50 py-2 rounded-md text-xs font-medium transition-colors">
+                    Узнать цену
+                  </a>
                 </div>
-                <a href="#contacts" className="mt-4 block text-center border border-green-200 text-green-600 hover:bg-green-50 py-2 rounded-md text-xs font-medium transition-colors">
-                  Узнать цену
-                </a>
               </div>
             ))}
           </div>
@@ -380,15 +381,7 @@ const Index = () => {
               </div>
             ))}
           </div>
-          <div className="bg-[#1a2332] rounded-xl p-6 text-white flex flex-col md:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 className="font-semibold text-base mb-1">Бесплатный расчёт доставки</h3>
-              <p className="text-gray-400 text-sm">Укажите адрес — рассчитаем стоимость и сроки</p>
-            </div>
-            <a href="#contacts" className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md text-sm font-medium whitespace-nowrap transition-colors">
-              Рассчитать доставку
-            </a>
-          </div>
+
         </div>
       </section>
 
@@ -399,7 +392,7 @@ const Index = () => {
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-[#1a2332] mb-4">О компании</h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                ГК Поволжье — один из ведущих поставщиков геосинтетических материалов в Приволжском федеральном округе. Мы работаем с 2012 года и за это время выполнили более 1000 заказов для строительных компаний, дорожников и частных застройщиков.
+                ShellTechGEO — один из ведущих поставщиков геосинтетических материалов в Приволжском федеральном округе. Мы работаем с 2012 года и за это время выполнили более 1000 заказов для строительных компаний, дорожников и частных застройщиков.
               </p>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 Наш склад расположен в Нижнем Новгороде. В наличии всегда широкий ассортимент геотекстиля, геомембран, георешёток, габионов и других материалов от проверенных производителей.
@@ -571,11 +564,9 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
             <div className="col-span-2 md:col-span-1">
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center">
-                  <Icon name="Leaf" size={16} className="text-white" />
-                </div>
+                <img src="https://cdn.poehali.dev/projects/9c8bc8d9-8e4f-43d5-9a7c-670342737c1c/bucket/18dd5e30-276a-4a69-af83-5a602f155ad8.jpg" alt="ShellTechGEO" className="w-8 h-8 rounded-md object-cover" />
                 <div>
-                  <div className="text-white font-bold text-sm leading-none">ГК Поволжье</div>
+                  <div className="text-white font-bold text-sm leading-none">ShellTechGEO</div>
                   <div className="text-green-400 text-xs">Геосинтетика</div>
                 </div>
               </div>
@@ -607,8 +598,8 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-5 flex flex-col md:flex-row justify-between items-center gap-2">
-            <p className="text-gray-600 text-xs">© 2024 ГК Поволжье. Все права защищены.</p>
-            <p className="text-gray-600 text-xs">Нижний Новгород · gkpovolzhje.ru</p>
+            <p className="text-gray-600 text-xs">© 2024 ShellTechGEO. Все права защищены.</p>
+            <p className="text-gray-600 text-xs">Нижний Новгород</p>
           </div>
         </div>
       </footer>
